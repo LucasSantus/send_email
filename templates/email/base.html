@@ -1,0 +1,32 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+	<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <style>
+        </style>
+
+        <title>Send Email</title>
+	</head>
+
+	<body class="container bg-primary">
+		<div >
+			{% block conteudo %}
+			{% endblock conteudo %}
+		</div>
+
+		<div>
+			<p>Atenciosamente,</p>
+			<p>Equipe Unincare.</p>
+			<p>
+				Está é uma mensagem automática, por favor, não a responda. Nenhum e-mail enviado pela Unincare tem arquivos anexados ou solicita o preenchimento de senhas e informações cadastrais.
+			</p>
+		</div>
+	</body>
+</html>

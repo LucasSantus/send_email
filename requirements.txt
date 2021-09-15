@@ -1,0 +1,11 @@
+asgiref==3.4.1
+Django==3.2.7
+django-sms==0.5.0
+httplib2==0.19.1
+pkg_resources==0.0.0
+pyparsing==2.4.7
+pytz==2021.1
+six==1.16.0
+sqlparse==0.4.2
+textmagic==2.0.3
+typing-extensions==3.10.0.2

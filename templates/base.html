@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+        <!-- Import CSS Bootstrap -->
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+        <!-- Import Styles Personalizados -->
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+
+        <!-- Import Icons -->
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- Nome da Página -->
+        <title>Send SMS</title>
+    </head>
+
+    <body>
+        <main>
+            <!-- Page Content -->
+            <div class="container">
+                <h1 class="fw-light text-center mt-4 mb-0">Thumbnail Gallery</h1>
+                <hr class="mt-2 mb-5">
+                <!-- Estrutura das Imagens -->
+                <div id="gallery" class="row text-center text-lg-start">
+                </div>
+            </div>
+        </main>
+
+        <footer class="bg-light text-center text-lg-start">
+            <div class="text-center p-3">
+                © 2021 Copyright - Gallery Images
+            </div>
+        </footer>
+
+        <!-- Import JS JQuery -->
+        <script src="{% static 'js/jquery.min.js' %}"></script>
+        
+        <!-- Import JS Bootstrap -->
+        <script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+        <!-- Import JS Bundle Bootstrap -->
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    </body>
+</html>    
