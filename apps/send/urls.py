@@ -4,6 +4,8 @@ from django.conf.urls import url
 from .views import *
 
 urlpatterns = [
-    # INDEX
-    path("send/", send, name="send"),
+    # path("send/", send_email, name="send"),
+
+    # VALIDAÇÃO
+    path("validacao/", validacao, name="validacao"),
 ]

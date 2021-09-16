@@ -11,10 +11,15 @@ https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
 from pathlib import Path
+import os, sys
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+#Localização dos Aplicativos Externos
+sys.path.append(
+    os.path.join(BASE_DIR, "apps")
+)
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
@@ -28,7 +33,7 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-# APP's Internos
+# APP's Padrões
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -38,11 +43,17 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
-# APP's Externos
+# APP's Internos
 INSTALLED_APPS += [
     'home',
     'send',
 ]
+
+# APP's Externos
+INSTALLED_APPS += [
+    'bootstrapform',
+]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -124,6 +135,10 @@ SMS_BACKEND = 'sms.backends.dummy.SmsBackend'
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = '/static/'
+
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static")
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field

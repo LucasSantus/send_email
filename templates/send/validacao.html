@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% load bootstrap %}
+
+<!-- Block Conteúdo da Página -->
+{% block content %}
+    <div class="row align-items-center vh-100">
+        <div class="col">
+            <div class="d-flex justify-content-center">
+                <div class="card text-center shadow">
+                    <div class="card-body">
+                        <h5 class="card-title">Código de Validação</h5>
+                        <p class="card-text">O código de confirmação foi enviado ao e-mail inserido.</p>
+
+                        <form method="POST" enctype="multipart/form-data">
+                            {% csrf_token %}
+                            <div class="container mt-10">
+                                <div class="container">
+                                    <div class="container col-sm-8">
+                                        <div class="card-body p-4">
+                                            <div>
+                                                {{form|bootstrap}}
+                                            </div>
+
+                                            <hr class="divider">
+                                            <div class="text-center">
+                                                <button type="submit" class=" text-center btn btn-outline-dark btn-lg">Adicionar</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
