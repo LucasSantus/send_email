@@ -26,9 +26,9 @@ def send_email():
     mensagem = EmailMultiAlternatives(subject, template_html, from_email, to)
     mensagem.attach_alternative(html_content, "text/html")
     mensagem.send()
+    return context['code']
 
 def validacao(request):
-    send_email()
     form = ValidacaoForm()
     if request.POST:
         form = ValidacaoForm(request.POST)
@@ -39,8 +39,6 @@ def validacao(request):
     context = {
         "form": form,
     }
-
-    send_email()
 
     return render(request, "send/validacao.html", context)
 
